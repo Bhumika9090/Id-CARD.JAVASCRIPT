@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: white;
+            border: 5px solid black;
+            margin: 20px auto;
+        }
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+             background-color: #f0f0f0; 
+        } */
+        
+        </style>
+    
+    <h1 id="h1">ID Card Using JavaScript</h1>
+</head>
+<body>
+     <button onclick="addcard()">Click Me</button>
+    <script>
+        function addcard(){
+            let div1 = document.createElement("div");
+            div1.classList.add('card');
+
+            let company = document.createElement("p");
+            company.innerHTML = "Google";
+            company.style.color = "red";
+            company.style.fontSize = "30px"
+            div1.append(company);
+
+            let image = document.createElement("img");
+            image.setAttribute(
+                "src",
+                "https://fdiinc.com/wp-content/uploads/2021/02/professional-female-circle-1030x1030.png"
+            );
+            image.style.height = "30%";
+            image.style.width = "50%";
+            div1.append(image);
+
+            let title = document.createElement("h3");
+            title.innerHTML = "Name: Seetha";
+            div1.append(title);
+
+            let num = document.createElement("h3");
+            num.innerHTML = "PHNo: 0000000000";
+            div1.append(num);
+
+            let role = document.createElement("h3");
+            role.innerHTML = "Role: Java Developer";
+            div1.append(role);
+
+            document.body.append(div1);
+        }
+    </script>
+</body>
+</html>
